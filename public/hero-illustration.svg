@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Elements -->
+  <circle cx="400" cy="300" r="250" fill="#4CAF50" fill-opacity="0.05"/>
+  <circle cx="400" cy="300" r="200" fill="#009688" fill-opacity="0.05"/>
+  
+  <!-- Network Nodes -->
+  <circle cx="400" cy="300" r="80" fill="#8BC34A" fill-opacity="0.2" stroke="#8BC34A" stroke-width="3"/>
+  <circle cx="250" cy="200" r="40" fill="#03A9F4" fill-opacity="0.2" stroke="#03A9F4" stroke-width="2"/>
+  <circle cx="550" cy="200" r="40" fill="#03A9F4" fill-opacity="0.2" stroke="#03A9F4" stroke-width="2"/>
+  <circle cx="300" cy="450" r="40" fill="#03A9F4" fill-opacity="0.2" stroke="#03A9F4" stroke-width="2"/>
+  <circle cx="500" cy="450" r="40" fill="#03A9F4" fill-opacity="0.2" stroke="#03A9F4" stroke-width="2"/>
+  <circle cx="200" cy="350" r="30" fill="#4CAF50" fill-opacity="0.2" stroke="#4CAF50" stroke-width="2"/>
+  <circle cx="600" cy="350" r="30" fill="#4CAF50" fill-opacity="0.2" stroke="#4CAF50" stroke-width="2"/>
+  
+  <!-- Connection Lines -->
+  <path d="M400 300L250 200" stroke="#8BC34A" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M400 300L550 200" stroke="#8BC34A" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M400 300L300 450" stroke="#8BC34A" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M400 300L500 450" stroke="#8BC34A" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M400 300L200 350" stroke="#8BC34A" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M400 300L600 350" stroke="#8BC34A" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M250 200L200 350" stroke="#009688" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M250 200L300 450" stroke="#009688" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M550 200L600 350" stroke="#009688" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M550 200L500 450" stroke="#009688" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M300 450L500 450" stroke="#009688" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M200 350L600 350" stroke="#009688" stroke-width="1.5" stroke-dasharray="3 3"/>
+  
+  <!-- Node Icons -->
+  <g transform="translate(385, 285)">
+    <path d="M15 0L0 25H30L15 0Z" fill="#2E7D32"/>
+    <text x="15" y="20" font-family="Arial" font-size="10" fill="white" text-anchor="middle">SC</text>
+  </g>
+  
+  <g transform="translate(235, 185)">
+    <circle cx="15" cy="15" r="15" fill="#03A9F4"/>
+    <text x="15" y="19" font-family="Arial" font-size="10" fill="white" text-anchor="middle">P</text>
+  </g>
+  
+  <g transform="translate(535, 185)">
+    <circle cx="15" cy="15" r="15" fill="#03A9F4"/>
+    <text x="15" y="19" font-family="Arial" font-size="10" fill="white" text-anchor="middle">D</text>
+  </g>
+  
+  <g transform="translate(285, 435)">
+    <circle cx="15" cy="15" r="15" fill="#03A9F4"/>
+    <text x="15" y="19" font-family="Arial" font-size="10" fill="white" text-anchor="middle">R</text>
+  </g>
+  
+  <g transform="translate(485, 435)">
+    <circle cx="15" cy="15" r="15" fill="#03A9F4"/>
+    <text x="15" y="19" font-family="Arial" font-size="10" fill="white" text-anchor="middle">V</text>
+  </g>
+  
+  <g transform="translate(185, 335)">
+    <circle cx="15" cy="15" r="15" fill="#4CAF50"/>
+    <text x="15" y="19" font-family="Arial" font-size="10" fill="white" text-anchor="middle">C</text>
+  </g>
+  
+  <g transform="translate(585, 335)">
+    <circle cx="15" cy="15" r="15" fill="#4CAF50"/>
+    <text x="15" y="19" font-family="Arial" font-size="10" fill="white" text-anchor="middle">T</text>
+  </g>
+  
+  <!-- Data Flow Animation -->
+  <circle cx="325" cy="250" r="4" fill="#009688">
+    <animate attributeName="cx" from="400" to="250" dur="3s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="cy" from="300" to="200" dur="3s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="475" cy="250" r="4" fill="#009688">
+    <animate attributeName="cx" from="400" to="550" dur="4s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="cy" from="300" to="200" dur="4s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="350" cy="375" r="4" fill="#009688">
+    <animate attributeName="cx" from="400" to="300" dur="3.5s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" from="300" to="450" dur="3.5s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="450" cy="375" r="4" fill="#009688">
+    <animate attributeName="cx" from="400" to="500" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" from="300" to="450" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Blockchain Elements -->
+  <rect x="350" y="100" width="100" height="30" rx="5" fill="#2E7D32" fill-opacity="0.2" stroke="#2E7D32" stroke-width="1"/>
+  <rect x="350" y="140" width="100" height="30" rx="5" fill="#2E7D32" fill-opacity="0.2" stroke="#2E7D32" stroke-width="1"/>
+  <rect x="350" y="180" width="100" height="30" rx="5" fill="#2E7D32" fill-opacity="0.2" stroke="#2E7D32" stroke-width="1"/>
+  <line x1="400" y1="130" x2="400" y2="140" stroke="#2E7D32" stroke-width="1"/>
+  <line x1="400" y1="170" x2="400" y2="180" stroke="#2E7D32" stroke-width="1"/>
+</svg>

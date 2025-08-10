@@ -1,0 +1,9 @@
+---
+import { defaultLang } from '../i18n/ui';
+---
+
+<meta http-equiv="refresh" content={`0;url=/${defaultLang}/`} />
+
+<script>
+  window.location.pathname = `/${import.meta.env.DEFAULT_LANGUAGE || 'en'}/`;
+</script>

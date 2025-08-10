@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Círculo exterior -->
+  <circle cx="100" cy="100" r="80" stroke="#4CAF50" stroke-width="2" stroke-opacity="0.3"/>
+  
+  <!-- Elementos que simbolizan blockchain y ciencia -->
+  <path d="M70 130L100 70L130 130" stroke="#2E7D32" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 110H120" stroke="#2E7D32" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Símbolo central -->
+  <circle cx="100" cy="70" r="10" fill="#4CAF50"/>
+  <circle cx="70" cy="130" r="10" fill="#009688"/>
+  <circle cx="130" cy="130" r="10" fill="#009688"/>
+  
+  <!-- Letras SC - simplificadas a formas -->
+  <path d="M85 100C85 95 90 95 90 95H95V100H90C90 100 90 100 90 100C90 100 90 100 90 100H95C95 100 100 100 100 105C100 110 95 110 95 110H90V105H95C95 105 95 105 95 105C95 105 95 105 95 105H90C90 105 85 105 85 100Z" fill="#2E7D32"/>
+  <path d="M105 95H110C110 95 115 95 115 100C115 105 110 105 110 105H108V110H105V95ZM108 100H110C110 100 110 100 110 100C110 100 110 100 110 100H108V100Z" fill="#2E7D32"/>
+</svg>

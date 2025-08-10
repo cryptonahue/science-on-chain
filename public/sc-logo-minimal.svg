@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Círculo de fondo -->
+  <circle cx="100" cy="100" r="90" fill="#4CAF50" fill-opacity="0.05" stroke="#4CAF50" stroke-width="2"/>
+  
+  <!-- Forma hexagonal para representar cadena de bloques -->
+  <path d="M100 40L145 70V130L100 160L55 130V70L100 40Z" stroke="#2E7D32" stroke-width="3" fill="none"/>
+  
+  <!-- Líneas internas que representan conexiones -->
+  <path d="M100 40V160" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M55 70L145 130" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M55 130L145 70" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="5 5"/>
+  
+  <!-- Nodo central -->
+  <circle cx="100" cy="100" r="15" fill="#4CAF50"/>
+  
+  <!-- Letras SC -->
+  <path d="M90 96C90 96 84 96 84 90C84 84 90 84 90 84H95V89H90C90 89 89 89 89 90C89 91 90 91 90 91H95C95 91 101 91 101 97C101 103 95 103 95 103H90V98H95C95 98 96 98 96 97C96 96 95 96 95 96H90Z" fill="white"/>
+  <path d="M105 84C105 84 111 84 111 90C111 96 105 96 105 96H103V103H98V84H105ZM103 91H105C105 91 106 91 106 90C106 89 105 89 105 89H103V91Z" fill="white"/>
+</svg>

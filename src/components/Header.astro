@@ -1,0 +1,158 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<header class="py-4 relative z-50">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center">
+      <!-- Logo - Estilo Celo -->
+      <a href={`/${lang}/`} class="flex items-center">
+        <span class="text-2xl font-bold text-foreground">Science<span class="text-primary">OnChain</span></span>
+      </a>
+      
+      <!-- Navigation - Desktop - Inspirado en Celo/Gitcoin -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href={`/${lang}/`} class="text-foreground/80 hover:text-primary transition-colors font-medium">
+          {t('nav.home')}
+        </a>
+        <a href={`/${lang}/about`} class="text-foreground/80 hover:text-primary transition-colors font-medium">
+          {t('nav.about')}
+        </a>
+        <a href={`/${lang}/research`} class="text-foreground/80 hover:text-primary transition-colors font-medium">
+          {t('nav.research')}
+        </a>
+        <a href={`/${lang}/community`} class="text-foreground/80 hover:text-primary transition-colors font-medium">
+          {t('nav.community')}
+        </a>
+        <a href={`/${lang}/contact`} class="text-foreground/80 hover:text-primary transition-colors font-medium">
+          {t('nav.contact')}
+        </a>
+      </nav>
+      
+      <!-- Acciones - Desktop -->
+      <div class="hidden md:flex items-center space-x-4">
+        <!-- Language Selector - Estilo Celo -->
+        <div class="relative group">
+          <button class="flex items-center space-x-1 text-foreground/80 hover:text-primary transition-colors p-2 rounded-lg">
+            <span>{t('nav.language')}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <!-- Dropdown - Estilo Celo -->
+          <div class="absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <a href="/en/" class={`block px-4 py-2 rounded-md ${lang === 'en' ? 'bg-primary/10 text-primary' : 'text-foreground/80 hover:bg-neutral-light'}`}>
+              English
+            </a>
+            <a href="/es/" class={`block px-4 py-2 rounded-md ${lang === 'es' ? 'bg-primary/10 text-primary' : 'text-foreground/80 hover:bg-neutral-light'}`}>
+              Español
+            </a>
+            <a href="/pt/" class={`block px-4 py-2 rounded-md ${lang === 'pt' ? 'bg-primary/10 text-primary' : 'text-foreground/80 hover:bg-neutral-light'}`}>
+              Português
+            </a>
+          </div>
+        </div>
+        
+        <!-- Botones CTA - Estilo Gitcoin/Celo -->
+        <a href="#" class="flex items-center text-foreground font-medium hover:text-primary transition-colors">
+          Documentación
+        </a>
+        <a href="#" class="bg-primary hover:bg-primary-light text-white py-2 px-5 rounded-xl font-medium transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md">
+          Unirse
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Button - Estilo Celo -->
+      <button id="mobileMenuButton" class="md:hidden text-foreground p-2 focus:outline-none rounded-lg hover:bg-neutral-light transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu - Estilo Celo -->
+    <div id="mobileMenu" class="md:hidden fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="relative h-full flex flex-col p-6">
+        <!-- Close Button -->
+        <button id="closeMenuButton" class="absolute top-4 right-4 text-foreground p-2 focus:outline-none rounded-lg hover:bg-neutral-light transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        
+        <!-- Logo -->
+        <div class="mb-8 mt-4">
+          <span class="text-2xl font-bold text-foreground">Science<span class="text-primary">OnChain</span></span>
+        </div>
+        
+        <!-- Nav Links -->
+        <nav class="flex flex-col space-y-6 mb-8">
+          <a href={`/${lang}/`} class="text-foreground/80 hover:text-primary transition-colors font-medium text-xl">
+            {t('nav.home')}
+          </a>
+          <a href={`/${lang}/about`} class="text-foreground/80 hover:text-primary transition-colors font-medium text-xl">
+            {t('nav.about')}
+          </a>
+          <a href={`/${lang}/research`} class="text-foreground/80 hover:text-primary transition-colors font-medium text-xl">
+            {t('nav.research')}
+          </a>
+          <a href={`/${lang}/community`} class="text-foreground/80 hover:text-primary transition-colors font-medium text-xl">
+            {t('nav.community')}
+          </a>
+          <a href={`/${lang}/contact`} class="text-foreground/80 hover:text-primary transition-colors font-medium text-xl">
+            {t('nav.contact')}
+          </a>
+        </nav>
+        
+        <!-- Language Selector -->
+        <div class="mb-8">
+          <h3 class="text-lg font-semibold mb-4 text-foreground font-merriweather">{t('nav.language')}</h3>
+          <div class="flex flex-col space-y-3">
+            <a href="/en/" class={`px-4 py-2 rounded-md ${lang === 'en' ? 'bg-primary/10 text-primary' : 'text-foreground/80 hover:bg-neutral-light'}`}>
+              English
+            </a>
+            <a href="/es/" class={`px-4 py-2 rounded-md ${lang === 'es' ? 'bg-primary/10 text-primary' : 'text-foreground/80 hover:bg-neutral-light'}`}>
+              Español
+            </a>
+            <a href="/pt/" class={`px-4 py-2 rounded-md ${lang === 'pt' ? 'bg-primary/10 text-primary' : 'text-foreground/80 hover:bg-neutral-light'}`}>
+              Português
+            </a>
+          </div>
+        </div>
+        
+        <!-- Buttons -->
+        <div class="mt-auto flex flex-col space-y-4">
+          <a href="#" class="border border-primary/20 text-foreground hover:border-primary/50 py-3 w-full text-center rounded-xl">
+            Documentación
+          </a>
+          <a href="#" class="bg-primary hover:bg-primary-light text-white py-3 w-full text-center rounded-xl transition-colors duration-300">
+            Unirse
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const closeMenuButton = document.getElementById('closeMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (mobileMenuButton && closeMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-full');
+      });
+      
+      closeMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+      });
+    }
+  });
+</script>

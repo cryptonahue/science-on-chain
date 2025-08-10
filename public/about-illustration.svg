@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Elements -->
+  <rect width="800" height="600" fill="#F8FAFA"/>
+  <circle cx="400" cy="300" r="280" fill="#4CAF50" fill-opacity="0.03"/>
+  <circle cx="400" cy="300" r="220" fill="#009688" fill-opacity="0.04"/>
+  
+  <!-- Earth/Globe -->
+  <circle cx="400" cy="300" r="150" fill="#E1F5FE" stroke="#B3E5FC" stroke-width="4"/>
+  
+  <!-- Continents -->
+  <path d="M340 200C360 190 380 200 390 210C400 220 410 210 420 215C430 220 440 230 450 220C460 210 470 220 480 230C490 240 485 260 480 270C475 280 460 290 450 300C440 310 430 320 420 310C410 300 400 310 390 320C380 330 370 320 360 310C350 300 340 310 330 300C320 290 310 280 320 270C330 260 320 250 330 240C340 230 330 210 340 200Z" fill="#8BC34A" fill-opacity="0.7"/>
+  <path d="M300 280C310 270 320 280 330 290C340 300 350 290 360 300C370 310 380 320 370 330C360 340 350 350 340 340C330 330 320 340 310 330C300 320 290 310 300 300C310 290 290 290 300 280Z" fill="#8BC34A" fill-opacity="0.7"/>
+  <path d="M380 360C390 350 400 360 410 370C420 380 430 370 440 380C450 390 460 400 450 410C440 420 430 430 420 420C410 410 400 420 390 410C380 400 370 390 380 380C390 370 370 370 380 360Z" fill="#8BC34A" fill-opacity="0.7"/>
+  
+  <!-- Blockchain Nodes -->
+  <circle cx="300" cy="200" r="10" fill="#03A9F4" stroke="white" stroke-width="2"/>
+  <circle cx="500" cy="250" r="10" fill="#03A9F4" stroke="white" stroke-width="2"/>
+  <circle cx="350" cy="400" r="10" fill="#03A9F4" stroke="white" stroke-width="2"/>
+  <circle cx="450" cy="350" r="10" fill="#03A9F4" stroke="white" stroke-width="2"/>
+  <circle cx="280" cy="300" r="10" fill="#03A9F4" stroke="white" stroke-width="2"/>
+  <circle cx="520" cy="330" r="10" fill="#03A9F4" stroke="white" stroke-width="2"/>
+  
+  <!-- Connection Lines -->
+  <path d="M300 200L500 250" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M500 250L520 330" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M520 330L450 350" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M450 350L350 400" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M350 400L280 300" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M280 300L300 200" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M300 200L450 350" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M500 250L350 400" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M280 300L520 330" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  
+  <!-- Decentralized Science Text -->
+  <g transform="translate(320, 120)">
+    <rect width="160" height="50" rx="25" fill="#4CAF50" fill-opacity="0.2"/>
+    <text x="80" y="30" font-family="Arial" font-size="15" font-weight="bold" fill="#2E7D32" text-anchor="middle">Decentralized Science</text>
+  </g>
+  
+  <!-- Scientific Symbols -->
+  <g transform="translate(250, 180)">
+    <circle cx="10" cy="10" r="10" fill="#009688" fill-opacity="0.3"/>
+    <text x="10" y="14" font-family="Arial" font-size="12" fill="#009688" text-anchor="middle">R</text>
+  </g>
+  
+  <g transform="translate(480, 230)">
+    <circle cx="10" cy="10" r="10" fill="#009688" fill-opacity="0.3"/>
+    <text x="10" y="14" font-family="Arial" font-size="12" fill="#009688" text-anchor="middle">P</text>
+  </g>
+  
+  <g transform="translate(330, 380)">
+    <circle cx="10" cy="10" r="10" fill="#009688" fill-opacity="0.3"/>
+    <text x="10" y="14" font-family="Arial" font-size="12" fill="#009688" text-anchor="middle">D</text>
+  </g>
+  
+  <g transform="translate(430, 330)">
+    <circle cx="10" cy="10" r="10" fill="#009688" fill-opacity="0.3"/>
+    <text x="10" y="14" font-family="Arial" font-size="12" fill="#009688" text-anchor="middle">T</text>
+  </g>
+  
+  <g transform="translate(260, 280)">
+    <circle cx="10" cy="10" r="10" fill="#009688" fill-opacity="0.3"/>
+    <text x="10" y="14" font-family="Arial" font-size="12" fill="#009688" text-anchor="middle">C</text>
+  </g>
+  
+  <g transform="translate(500, 310)">
+    <circle cx="10" cy="10" r="10" fill="#009688" fill-opacity="0.3"/>
+    <text x="10" y="14" font-family="Arial" font-size="12" fill="#009688" text-anchor="middle">S</text>
+  </g>
+  
+  <!-- Data Flow Animations -->
+  <circle cx="350" cy="225" r="4" fill="#03A9F4">
+    <animate attributeName="cx" from="300" to="500" dur="4s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="cy" from="200" to="250" dur="4s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="450" cy="290" r="4" fill="#03A9F4">
+    <animate attributeName="cx" from="500" to="350" dur="5s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="cy" from="250" to="400" dur="5s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="400" cy="350" r="4" fill="#03A9F4">
+    <animate attributeName="cx" from="450" to="280" dur="4.5s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" from="350" to="300" dur="4.5s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Blockchain Records -->
+  <g transform="translate(550, 150)">
+    <rect width="120" height="30" rx="5" fill="white" stroke="#2E7D32" stroke-width="1"/>
+    <text x="60" y="20" font-family="Arial" font-size="12" fill="#2E7D32" text-anchor="middle">Research Data</text>
+  </g>
+  
+  <g transform="translate(550, 190)">
+    <rect width="120" height="30" rx="5" fill="white" stroke="#2E7D32" stroke-width="1"/>
+    <text x="60" y="20" font-family="Arial" font-size="12" fill="#2E7D32" text-anchor="middle">Peer Reviews</text>
+  </g>
+  
+  <g transform="translate(550, 230)">
+    <rect width="120" height="30" rx="5" fill="white" stroke="#2E7D32" stroke-width="1"/>
+    <text x="60" y="20" font-family="Arial" font-size="12" fill="#2E7D32" text-anchor="middle">Publications</text>
+  </g>
+  
+  <g transform="translate(550, 270)">
+    <rect width="120" height="30" rx="5" fill="white" stroke="#2E7D32" stroke-width="1"/>
+    <text x="60" y="20" font-family="Arial" font-size="12" fill="#2E7D32" text-anchor="middle">Funding</text>
+  </g>
+  
+  <path d="M500 250C530 250 540 200 550 165" stroke="#2E7D32" stroke-width="1" stroke-dasharray="3 3"/>
+  <path d="M520 330C540 310 545 285 550 285" stroke="#2E7D32" stroke-width="1" stroke-dasharray="3 3"/>
+</svg>

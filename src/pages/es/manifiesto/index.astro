@@ -1,0 +1,53 @@
+---
+import MainLayout from '../../../layouts/MainLayout.astro';
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+// Componentes del Manifiesto
+import ManifestoHero from '../../../components/manifesto/ManifestoHero.astro';
+import VisionSection from '../../../components/manifesto/VisionSection.astro';
+import PrinciplesSection from '../../../components/manifesto/PrinciplesSection.astro';
+import ContributionSection from '../../../components/manifesto/ContributionSection.astro';
+import CommitmentSection from '../../../components/manifesto/CommitmentSection.astro';
+import CallToActionSection from '../../../components/manifesto/CallToActionSection.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<MainLayout title="Manifiesto | ScienceOnChain" description="Nuestro manifiesto para la ciencia descentralizada">
+  <div class="relative overflow-hidden">
+    <!-- Fondo con círculos borrosos para efecto de glassmorfismo -->
+    <div class="absolute inset-0 overflow-hidden -z-10">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full filter blur-3xl"></div>
+      <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-secondary/20 rounded-full filter blur-3xl"></div>
+      <div class="absolute top-1/3 right-1/3 w-64 h-64 bg-accent-yellow/10 rounded-full filter blur-3xl"></div>
+      <div class="bg-grid absolute inset-0 opacity-30"></div>
+    </div>
+    
+    <Header />
+    
+    <main>
+      <!-- Header del Manifiesto -->
+      <ManifestoHero />
+      
+      <!-- Sección de Visión/Misión -->
+      <VisionSection lang={lang} />
+      
+      <!-- Sección de Principios Fundamentales -->
+      <PrinciplesSection />
+      
+      <!-- Sección: Cómo ScienceOnChain Contribuye -->
+      <ContributionSection />
+      
+      <!-- Sección de Nuestro Compromiso -->
+      <CommitmentSection lang={lang} />
+      
+      <!-- Call to Action Final -->
+      <CallToActionSection lang={lang} />
+    </main>
+    
+    <Footer />
+  </div>
+</MainLayout>

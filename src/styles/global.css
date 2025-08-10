@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importar tipografías adicionales */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Merriweather se carga en el Layout principal */
+
+:root {
+  --shadow-color: 163 60% 20%;
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.08),
+    0.4px 0.8px 1px hsl(var(--shadow-color) / 0.11);
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.08),
+    0.8px 1.6px 2px hsl(var(--shadow-color) / 0.1),
+    2px 4px 5px hsl(var(--shadow-color) / 0.12);
+  --shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.08),
+    1.5px 2.9px 3.7px hsl(var(--shadow-color) / 0.09),
+    3.7px 7.3px 9.2px hsl(var(--shadow-color) / 0.11),
+    8.9px 17.6px 22.1px hsl(var(--shadow-color) / 0.13);
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-neutral-light text-foreground;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif !important;
+    @apply font-bold text-foreground;
+  }
+  
+  /* Estilos para los distintos niveles de encabezados */
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight font-bold tracking-tight;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl leading-snug font-bold tracking-tight;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl font-bold leading-relaxed tracking-normal;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl font-bold leading-relaxed tracking-normal;
+  }
+  
+  /* Estilos de botones actualizados - más Gitcoin */
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-medium bg-primary text-white transition duration-300 transform hover:-translate-y-1 hover:shadow-xl inline-flex items-center justify-center;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-medium bg-secondary text-white transition duration-300 transform hover:-translate-y-1 hover:shadow-xl inline-flex items-center justify-center;
+  }
+  
+  .btn-accent {
+    @apply px-6 py-3 rounded-lg font-medium bg-accent text-white transition duration-300 transform hover:-translate-y-1 hover:shadow-xl inline-flex items-center justify-center;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-3 rounded-lg font-medium border-2 border-primary text-primary transition duration-300 hover:bg-primary/5 inline-flex items-center justify-center;
+  }
+  
+  /* Estilos de tarjetas actualizados */
+  .card {
+    @apply bg-white rounded-xl p-6 shadow-card border border-gray-100 transition duration-300;
+  }
+
+  .card-hover {
+    @apply hover:shadow-bento hover:-translate-y-1;
+  }
+  
+  /* Estilos de tarjetas tipo Bento - más Gitcoin */
+  .bento-card {
+    @apply bg-white rounded-xl p-6 shadow-bento border border-gray-100/50 transition duration-300 hover:shadow-lg;
+  }
+  
+  /* Estilos de tarjetas con glasmorfismo */
+  .glass-card {
+    @apply backdrop-blur-lg bg-gradient-glass border border-white/20 rounded-xl shadow-glass transition-all duration-300 hover:shadow-xl;
+  }
+  
+  /* Estilos de gradientes de texto */
+  .gradient-text-primary {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-secondary {
+    @apply bg-gradient-secondary bg-clip-text text-transparent;
+  }
+  
+  /* Estilos para secciones */
+  .section {
+    @apply py-20 md:py-28;
+  }
+  
+  /* Contenedores actualizados */
+  .container {
+    @apply mx-auto px-4 max-w-[1180px];
+  }
+  
+  /* Tipografías especiales */
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-merriweather {
+    font-family: 'Merriweather', serif !important;
+  }
+  
+  .font-serif-alt {
+    font-family: 'Merriweather', serif !important;
+  }
+  
+  /* Clase para forzar Merriweather en encabezados donde sea necesario */
+  .heading-serif {
+    font-family: 'Merriweather', serif !important;
+    font-weight: 700;
+  }
+  
+  .font-italic {
+    font-style: italic;
+  }
+  
+  /* Combinación estilo Gitcoin para títulos */
+  .title-mixed {
+    @apply font-bold;
+  }
+  
+  .title-mixed .normal {
+    @apply font-sans;
+  }
+  
+  .title-mixed .serif {
+    @apply font-serif;
+  }
+  
+  .title-mixed .cursive {
+    @apply font-serif font-italic;
+  }
+}
+
+/* Animaciones actualizadas */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Elementos decorativos más modernos */
+.noise-bg {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+}
+
+/* Formas geométricas - más Gitcoin */
+.shape-hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.shape-diamond {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.shape-blob {
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+}

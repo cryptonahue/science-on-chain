@@ -1,0 +1,116 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="py-16 bg-neutral-light/60">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary-dark">
+        {t('home.features.title')}
+      </h2>
+      <p class="text-lg max-w-3xl mx-auto text-foreground/80">
+        {t('home.features.subtitle')}
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-5 mb-8">
+      <!-- Infraestructura Descentralizada -->
+      <div class="col-span-1 bg-primary/10 rounded-lg p-6 flex flex-col">
+        <div class="mb-4">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17H5a2 2 0 000 4h4a2 2 0 000-4zm0 0V9.5m0 7.5h6m0 0h4a2 2 0 000-4h-4a2 2 0 000 4zm0 0V9.5m-6-3V4a2 2 0 114 0v2.5M9 6.5h6" />
+            </svg>
+          </div>
+        </div>
+        
+        <h3 class="text-xl font-bold text-primary-dark mb-3">
+          {t('home.features.decentralized.title')}
+        </h3>
+        
+        <p class="text-foreground/80 text-base leading-relaxed">
+          {t('home.features.decentralized.description')}
+        </p>
+      </div>
+      
+      <!-- Acceso Abierto -->
+      <div class="col-span-1 bg-secondary/10 rounded-lg p-6 flex flex-col">
+        <div class="mb-4">
+          <div class="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 11V7a4 4 0 118 0m-4 8v2m-6-4h12a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6a2 2 0 012-2z" />
+            </svg>
+          </div>
+        </div>
+        
+        <h3 class="text-xl font-bold text-foreground mb-3">
+          {t('home.features.openaccess.title')}
+        </h3>
+        
+        <p class="text-foreground/80 text-base leading-relaxed">
+          {t('home.features.openaccess.description')}
+        </p>
+      </div>
+      
+      <!-- Investigación Sostenible -->
+      <div class="col-span-1 bg-accent/10 rounded-lg p-6 flex flex-col">
+        <div class="mb-4">
+          <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 21c.36-4.29 3.54-7.36 7.88-7.85.33-.04.59-.31.59-.65V4a1 1 0 0 1 1-1c6 0 9 7 9 10a9 9 0 0 1-9 9h-2c-2.96 0-5.43-1.67-6.59-4h.59c.36 0 .71-.1 1.01-.32.51-.34.57-1.09.1-1.49A7.43 7.43 0 0 1 5 11.86V21z" />
+            </svg>
+          </div>
+        </div>
+        
+        <h3 class="text-xl font-bold text-foreground mb-3">
+          {t('home.features.sustainable.title')}
+        </h3>
+        
+        <p class="text-foreground/80 text-base leading-relaxed">
+          {t('home.features.sustainable.description')}
+        </p>
+      </div>
+      
+      <!-- Ciencia Reproducible -->
+      <div class="col-span-1 bg-accent-purple/10 rounded-lg p-6 flex flex-col">
+        <div class="mb-4">
+          <div class="w-12 h-12 bg-accent-purple/20 rounded-lg flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+            </svg>
+          </div>
+        </div>
+        
+        <h3 class="text-xl font-bold text-foreground mb-3">
+          {t('home.features.reproducible.title')}
+        </h3>
+        
+        <p class="text-foreground/80 text-base leading-relaxed">
+          {t('home.features.reproducible.description')}
+        </p>
+      </div>
+      
+      <!-- Colaboración Global -->
+      <div class="col-span-1 bg-primary/10 rounded-lg p-6 flex flex-col">
+        <div class="mb-4">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+          </div>
+        </div>
+        
+        <h3 class="text-xl font-bold text-foreground mb-3">
+          {t('home.features.global.title')}
+        </h3>
+        
+        <p class="text-foreground/80 text-base leading-relaxed">
+          {t('home.features.global.description')}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

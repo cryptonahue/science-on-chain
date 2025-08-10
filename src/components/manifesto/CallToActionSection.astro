@@ -1,0 +1,32 @@
+---
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+---
+
+<section class="py-16 bg-bg-subtle relative">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute top-[5%] right-[10%] w-64 h-64 border border-primary/10 transform rotate-45"></div>
+    <div class="absolute bottom-[20%] left-[5%] w-48 h-48 border border-primary/10 transform rotate-12"></div>
+    <div class="absolute top-[40%] right-[15%] w-32 h-32 border border-secondary/10 transform -rotate-12"></div>
+  </div>
+  
+  <div class="container mx-auto px-4 text-center max-w-2xl">
+    <h2 class="text-3xl font-bold mb-6 text-foreground">
+      La ciencia es demasiado importante para permanecer centralizada
+    </h2>
+    <p class="text-xl mb-8 text-foreground/80 leading-relaxed font-medium">
+      El conocimiento pertenece a todos. Juntos, podemos reimaginar y reconstruir los cimientos de cómo se hace la ciencia en el siglo XXI.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href={`/${lang}/about`} class="bg-primary hover:bg-primary-light text-white py-3 px-8 rounded-xl font-medium transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+        Conoce más
+      </a>
+      <a href={`/${lang}/contact`} class="bg-white hover:bg-bg-subtle text-foreground py-3 px-8 rounded-xl font-medium border border-primary/20 transition-all duration-300 hover:border-primary/50">
+        Contáctanos
+      </a>
+    </div>
+  </div>
+</section>

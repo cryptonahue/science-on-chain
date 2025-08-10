@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Triángulo principal que representa ciencia y blockchain -->
+  <path d="M100 40L160 140H40L100 40Z" fill="#4CAF50" fill-opacity="0.1" stroke="#2E7D32" stroke-width="3"/>
+  
+  <!-- Línea horizontal que representa la cadena (chain) -->
+  <path d="M40 140L160 140" stroke="#2E7D32" stroke-width="3"/>
+  
+  <!-- Puntos de conexión -->
+  <circle cx="40" cy="140" r="6" fill="#009688"/>
+  <circle cx="100" cy="40" r="6" fill="#009688"/>
+  <circle cx="160" cy="140" r="6" fill="#009688"/>
+  
+  <!-- Líneas que conectan al centro - representan la descentralización -->
+  <path d="M100 40L100 120" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M40 140L100 120" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M160 140L100 120" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 4"/>
+  
+  <!-- Nodo central -->
+  <circle cx="100" cy="120" r="15" fill="#4CAF50"/>
+  
+  <!-- Letras SC -->
+  <path d="M93 116.5C93 116.5 88 116.5 88 111.5C88 106.5 93 106.5 93 106.5H97V110.5H93C93 110.5 92 110.5 92 111.5C92 112.5 93 112.5 93 112.5H97C97 112.5 102 112.5 102 117.5C102 122.5 97 122.5 97 122.5H93V118.5H97C97 118.5 98 118.5 98 117.5C98 116.5 97 116.5 97 116.5H93Z" fill="white"/>
+  <path d="M107 106.5C107 106.5 112 106.5 112 111.5C112 116.5 107 116.5 107 116.5H105V122.5H101V106.5H107ZM105 112.5H107C107 112.5 108 112.5 108 111.5C108 110.5 107 110.5 107 110.5H105V112.5Z" fill="white"/>
+</svg>

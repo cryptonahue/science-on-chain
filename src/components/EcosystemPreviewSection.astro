@@ -1,0 +1,152 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Ecosystem categories with their respective tools count and color
+const ecosystemCategories = [
+  { 
+    icon: '💰', 
+    name: 'Financiamiento', 
+    count: 15, 
+    color: 'primary',
+    description: 'DAOs, grants descentralizados, crowdfunding',
+    examples: ['VitaDAO', 'ResearchCoin', 'LabDAO']
+  },
+  { 
+    icon: '📝', 
+    name: 'Publicación', 
+    count: 12, 
+    color: 'secondary',
+    description: 'Journals descentralizados, preprints, peer review',
+    examples: ['Mirror', 'Orcid', 'DeSci Publish']
+  },
+  { 
+    icon: '📊', 
+    name: 'Datos', 
+    count: 18, 
+    color: 'accent',
+    description: 'Almacenamiento, compartir datasets, análisis',
+    examples: ['Ocean Protocol', 'Filecoin', 'Ceramic']
+  },
+  { 
+    icon: '🤝', 
+    name: 'Colaboración', 
+    count: 10, 
+    color: 'primary',
+    description: 'Redes de investigadores, mentorías, equipos',
+    examples: ['ResearchHub', 'Gitcoin', 'Coordinape']
+  },
+  { 
+    icon: '🏛️', 
+    name: 'Infraestructura', 
+    count: 8, 
+    color: 'secondary',
+    description: 'Protocolos base, identidad, verificación',
+    examples: ['IPFS', 'Ethereum', 'Polygon']
+  },
+  { 
+    icon: '🔬', 
+    name: 'Laboratorios', 
+    count: 6, 
+    color: 'accent',
+    description: 'Labs remotos, equipos compartidos, IoT',
+    examples: ['Molecule', 'BioDAO', 'LabGenius']
+  }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+        {t('home.ecosystem.title')}
+      </h2>
+      <p class="text-lg text-foreground/70 max-w-3xl mx-auto mb-8">
+        {t('home.ecosystem.subtitle')}
+      </p>
+    </div>
+    
+    <!-- Interactive Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+      {ecosystemCategories.map((category) => (
+        <div class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+          <!-- Header -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-3xl">{category.icon}</div>
+            <div class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-foreground/70">
+              {category.count} herramientas
+            </div>
+          </div>
+          
+          <!-- Content -->
+          <div class="mb-4">
+            <h3 class="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+              {category.name}
+            </h3>
+            <p class="text-sm text-foreground/70 leading-relaxed mb-3">
+              {category.description}
+            </p>
+          </div>
+          
+          <!-- Examples -->
+          <div class="space-y-2">
+            <p class="text-xs font-medium text-foreground/60 uppercase tracking-wide">Ejemplos populares:</p>
+            <div class="flex flex-wrap gap-2">
+              {category.examples.map((example) => (
+                <span class="px-2 py-1 bg-gray-100 text-xs text-foreground/70 rounded-md">
+                  {example}
+                </span>
+              ))}
+            </div>
+          </div>
+          
+          <!-- Hover indicator -->
+          <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div class="flex items-center space-x-2 text-sm text-primary">
+              <span>Explorar categoría</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Stats Row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary mb-2">100+</div>
+        <div class="text-sm text-foreground/70">Proyectos activos</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-secondary mb-2">$2.5B</div>
+        <div class="text-sm text-foreground/70">Financiamiento total</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-accent mb-2">50+</div>
+        <div class="text-sm text-foreground/70">Países participando</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary mb-2">12</div>
+        <div class="text-sm text-foreground/70">Categorías principales</div>
+      </div>
+    </div>
+    
+    <!-- CTA -->
+    <div class="text-center">
+      <a href={`/${lang}/explora`} class="inline-flex items-center space-x-3 bg-gradient-to-r from-primary to-primary-light text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all">
+        <span>{t('home.ecosystem.viewAll')}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </a>
+      
+      <p class="text-sm text-foreground/60 mt-4">
+        Descubre herramientas, compara opciones y encuentra la solución perfecta para tu investigación
+      </p>
+    </div>
+  </div>
+</section>

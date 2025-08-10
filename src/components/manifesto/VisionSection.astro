@@ -1,0 +1,44 @@
+---
+import GlassmorphismCard from '../GlassmorphismCard.astro';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+---
+
+<section class="py-12 relative">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2">
+        <div class="inline-flex items-center text-sm font-semibold px-4 py-2 bg-secondary/10 text-secondary rounded-full mb-6">
+          NUESTRA MISIÓN
+        </div>
+        <h2 class="text-3xl font-bold mb-6 text-foreground">
+          Divulgando la ciencia del futuro
+        </h2>
+        <p class="text-lg mb-4 text-foreground/80 leading-relaxed">
+          ScienceOnChain nace como una organización dedicada a la divulgación y educación sobre ciencia descentralizada (DeSci). 
+          Nuestro objetivo es conectar a científicos con las tecnologías, herramientas y comunidades que están transformando 
+          la investigación científica hacia un modelo más abierto, transparente y colaborativo.
+        </p>
+        <p class="text-lg mb-4 text-foreground/80 leading-relaxed">
+          No financiamos investigación, sino que proporcionamos conocimiento, recursos y conexiones para que los científicos 
+          puedan descubrir y aprovechar las oportunidades que ofrece la ciencia descentralizada. Creemos que la educación 
+          es el primer paso hacia la transformación del ecosistema científico.
+        </p>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <GlassmorphismCard
+          title="Ciencia Descentralizada"
+          content="Reimaginando el futuro del descubrimiento científico mediante la descentralización de procesos e incentivos."
+          linkText="Conoce más"
+          linkUrl={`/${lang}/about`}
+          colorClass="from-primary/20 to-secondary/20"
+          iconName="atom"
+        />
+      </div>
+    </div>
+  </div>
+</section>

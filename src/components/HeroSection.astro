@@ -1,0 +1,117 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="pt-20 pb-28 lg:pt-24 lg:pb-36 relative overflow-hidden">
+  <!-- Elementos decorativos más modernos estilo Gitcoin -->
+  <div class="absolute inset-0 -z-10">
+    <!-- Fondo de color base moderno -->
+    <div class="absolute inset-0 bg-neutral-light"></div>
+    
+    <!-- Formas geométricas estilo Gitcoin - más líneas y menos bordes -->
+    <div class="absolute top-[10%] right-[10%] w-64 h-64 border-2 border-primary/10 transform rotate-45"></div>
+    <div class="absolute bottom-[20%] left-[5%] w-48 h-48 border-2 border-secondary/10 transform rotate-12"></div>
+    
+    <!-- Manchas de color sutiles - más modernas -->
+    <div class="absolute top-0 left-[20%] w-[40%] h-[40%] bg-primary/3 rounded-full filter blur-3xl"></div>
+    <div class="absolute bottom-0 right-[10%] w-[30%] h-[30%] bg-secondary/3 rounded-full filter blur-3xl"></div>
+  </div>
+
+  <div class="container mx-auto">
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+      <!-- Hero Content - Inspirado más en la simpleza de Gitcoin-->
+      <div class="lg:w-1/2 text-center lg:text-left">
+        <div class="inline-flex items-center text-sm font-semibold px-4 py-2 bg-primary/15 text-primary-dark rounded-full mb-6">
+          CIENCIA = DESCENTRALIZACIÓN
+        </div>
+        
+        <h1 class="mb-8 leading-tight text-5xl md:text-6xl lg:text-7xl font-merriweather">
+          <span class="text-primary-dark">Science</span> 
+          <span class="text-foreground">Meets</span><br />
+          <span class="italic text-secondary">Blockchain</span>
+        </h1>
+        
+        <p class="text-xl leading-relaxed text-foreground/80 mb-10 max-w-2xl mx-auto lg:mx-0">
+          Revolucionamos la investigación científica mediante la descentralización para crear un ecosistema más transparente, eficiente y accesible.
+        </p>
+        
+        <!-- Botones estilo Gitcoin -->
+        <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+          <a href={`/${lang}/research`} class="bg-primary hover:bg-primary-light text-white py-3 px-8 rounded-lg font-medium transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+            {t('home.hero.cta1')}
+          </a>
+          <a href={`/${lang}/community`} class="bg-white hover:bg-neutral-light text-foreground py-3 px-8 rounded-lg font-medium border border-gray-200 transition-all duration-300 hover:border-primary/30">
+            {t('home.hero.cta2')}
+          </a>
+        </div>
+        
+        <!-- Estadísticas al estilo Gitcoin -->
+        <div class="flex flex-wrap mt-16 gap-8 justify-center lg:justify-start">
+          <div class="bg-white border border-gray-100 shadow-sm rounded-lg py-3 px-6">
+            <div class="text-3xl font-bold text-primary-dark">25M+</div>
+            <div class="text-sm text-foreground/70">Fondos Distribuidos</div>
+          </div>
+          <div class="bg-white border border-gray-100 shadow-sm rounded-lg py-3 px-6">
+            <div class="text-3xl font-bold text-primary-dark">300+</div>
+            <div class="text-sm text-foreground/70">Proyectos Financiados</div>
+          </div>
+          <div class="bg-white border border-gray-100 shadow-sm rounded-lg py-3 px-6">
+            <div class="text-3xl font-bold text-primary-dark">12K+</div>
+            <div class="text-sm text-foreground/70">Científicos Activos</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hero Visual - Con estilos más modernos y de Gitcoin -->
+      <div class="lg:w-1/2 relative">
+        <div class="relative z-10 w-full max-w-lg mx-auto">
+          <!-- Imagen principal con borde al estilo Gitcoin -->
+          <div class="flex items-center justify-center">
+            <div class="relative border border-gray-100 shadow-lg rounded-xl p-2 overflow-hidden bg-white">
+              <img 
+                src="/images/hero-science.jpg" 
+                alt="Ciencia Descentralizada" 
+                class="w-full aspect-[4/3] rounded-lg object-cover"
+                onError="this.style.display='none'; this.parentElement.classList.add('flex', 'items-center', 'justify-center', 'bg-primary/5', 'h-64'); this.parentElement.innerHTML += '<div class=\'text-primary text-center font-bold text-xl\'>ScienceOnChain</div>'"
+              />
+              <!-- Overlay de color -->
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-60 rounded-lg"></div>
+            </div>
+          </div>
+          
+          <!-- Elementos flotantes inspirados en Gitcoin -->
+          <div class="absolute -bottom-10 -left-10 bg-white shadow-lg rounded-lg p-5 max-w-[180px] transform rotate-3 border border-gray-100 z-20">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-dark" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="font-bold text-sm text-foreground">Peer Reviews</div>
+            </div>
+            <p class="text-xs text-foreground/70">
+              Revisión por pares verificable y transparente en blockchain
+            </p>
+          </div>
+          
+          <div class="absolute -top-6 -right-6 bg-white shadow-lg rounded-lg p-5 max-w-[200px] transform -rotate-3 border border-gray-100 z-20">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-dark" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                </svg>
+              </div>
+              <div class="font-bold text-sm text-foreground">Open Science</div>
+            </div>
+            <p class="text-xs text-foreground/70">
+              Investigación abierta y accesible para todos
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
