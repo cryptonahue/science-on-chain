@@ -21,4 +21,14 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+  vite: {
+    server: {
+      host: true,
+      allowedHosts: ['.sslip.io', '.traefik.me', 'scienceonchain.org']
+    },
+    preview: {
+      host: true,
+      allowedHosts: ['.sslip.io', '.traefik.me', 'scienceonchain.org']
+    }
+  }
 });
