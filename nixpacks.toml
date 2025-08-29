@@ -1,0 +1,8 @@
+[phases.build]
+cmd = "pnpm install && pnpm run build"
+
+[phases.start]
+cmd = "cp -r dist/* /var/www && nginx -g 'daemon off;'"
+
+[variables]
+NIXPACKS_BUILD_OUTPUT_DIR = "dist"
