@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro preview --host --port 4321",
-    "prebuild": "bun install",
+    "prebuild": "bun install --frozen-lockfile",
     "build": "astro build",
     "preview": "astro preview --host",
     "astro": "astro"
