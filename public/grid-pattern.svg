@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 0H100V100H0V0Z" fill="none"/>
-  <path d="M50 20L80 38V74L50 92L20 74V38L50 20Z" stroke="#EEEEEE" stroke-width="0.5"/>
-  <path d="M50 5L90 28V75L50 98L10 75V28L50 5Z" stroke="#F5F5F5" stroke-width="0.5"/>
-</svg>

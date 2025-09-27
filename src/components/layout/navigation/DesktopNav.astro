@@ -1,0 +1,85 @@
+---
+import { useTranslations } from '../../../i18n/utils.js';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<nav class="hidden lg:flex items-center space-x-8">
+  <a href="#que-es-desci" class="text-foreground/80 hover:text-primary hover:bg-primary/10 font-medium transition-colors py-2 px-3 rounded-lg">
+    {t('nav.whatIsDesci')}
+  </a>
+  <a href="#recursos" class="text-foreground/80 hover:text-primary hover:bg-primary/10 font-medium transition-colors py-2 px-3 rounded-lg">
+    {t('nav.resources')}
+  </a>
+  <a href="#nosotros" class="text-foreground/80 hover:text-primary hover:bg-primary/10 font-medium transition-colors py-2 px-3 rounded-lg">
+    {t('nav.aboutUs')}
+  </a>
+  <a href="#contacto" class="text-foreground/80 hover:text-primary hover:bg-primary/10 font-medium transition-colors py-2 px-3 rounded-lg">
+    {t('nav.contact')}
+  </a>
+
+  <!-- Language & CTAs -->
+  <div class="flex items-center space-x-4 ml-8">
+    <!-- Language Selector -->
+    <div class="language-selector">
+      <button class="language-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-foreground/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+        </svg>
+        <span class="text-sm font-medium text-foreground/80">{lang.toUpperCase()}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-foreground/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      
+      <div class="language-dropdown">
+        <a href="/es/" class={`language-option ${lang === 'es' ? 'active' : ''}`}>
+          Español
+        </a>
+        <a href="/en/" class={`language-option ${lang === 'en' ? 'active' : ''}`}>
+          English
+        </a>
+        <a href="/pt/" class={`language-option ${lang === 'pt' ? 'active' : ''}`}>
+          Português
+        </a>
+      </div>
+    </div>
+    
+    <!-- CTAs -->
+    <!-- <a href={`/${lang}/comenzar`} class="bg-primary hover:bg-primary text-white hover:text-secondary px-4 py-2 rounded-lg font-medium transition-colors">
+      Comenzar
+    </a> -->
+  </div>
+</nav>
+
+<style>
+  /* Language Selector */
+  .language-selector {
+    @apply relative;
+  }
+
+  .language-trigger {
+    @apply flex items-center space-x-1 px-3 py-2 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors;
+  }
+
+  .language-dropdown {
+    @apply absolute right-0 top-full mt-2 w-40 bg-neutral-light rounded-xl shadow-lg border border-primary/20 p-2 space-y-1 opacity-0 invisible transition-all duration-200;
+  }
+
+  .language-selector:hover .language-dropdown {
+    @apply opacity-100 visible;
+  }
+
+  .language-option {
+    @apply block px-3 py-2 rounded-lg text-sm hover:bg-primary/10 hover:text-primary transition-colors;
+  }
+
+  .language-option.active {
+    @apply bg-primary/10 text-primary font-medium;
+  }
+</style>

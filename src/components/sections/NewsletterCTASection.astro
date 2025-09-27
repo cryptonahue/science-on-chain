@@ -1,0 +1,190 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils.js';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="py-16 md:py-24 bg-primary">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          {t('newsletter.maintitle')}
+        </h2>
+        <p class="text-lg md:text-xl text-white/80 leading-relaxed">
+          {t('newsletter.subtitle')}
+        </p>
+      </div>
+
+      <!-- Two Cards Grid -->
+      <div class="grid lg:grid-cols-2 gap-8">
+
+        <!-- Follow Us Card -->
+        <div class="bg-primary-light rounded-3xl p-8">
+          <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">
+            {t('newsletter.followUs')}
+          </h3>
+          <p class="text-lg text-white/90 mb-8 leading-relaxed">
+            {t('newsletter.stayConnected')}
+          </p>
+
+          <!-- Social Links -->
+          <div class="space-y-4">
+            <a href="https://x.com/scienceonchain" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-white/90 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              <span>@scienceonchain</span>
+            </a>
+            <a href="https://www.linkedin.com/company/scienceonchain" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-white/90 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              <span>@scienceonchain</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Newsletter Card -->
+        <div class="border-2 border-white/20 border-dashed rounded-3xl p-8">
+          <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">
+            {t('newsletter.latestNews')}
+          </h3>
+
+          <!-- Benefits List -->
+          <div class="space-y-3 mb-8">
+            <div class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-white/90">{t('newsletter.benefit1')}</span>
+            </div>
+            <div class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-white/90">{t('newsletter.benefit2')}</span>
+            </div>
+            <div class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-white/90">{t('newsletter.benefit3')}</span>
+            </div>
+            <div class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-white/90">{t('newsletter.benefit4')}</span>
+            </div>
+          </div>
+
+          <!-- Newsletter Form -->
+          <form id="newsletter-form" class="space-y-4">
+            <input
+              type="email"
+              name="email"
+              id="newsletter-email"
+              placeholder={t('newsletter.placeholder')}
+              class="w-full px-4 py-3 rounded-xl bg-transparent border-2 border-white/30 text-white placeholder-white/60 focus:outline-none focus:border-secondary transition-colors"
+              required
+            />
+
+            <button
+              type="submit"
+              id="newsletter-submit"
+              class="w-full bg-secondary hover:bg-secondary-light text-foreground hover:text-foreground py-3 px-6 rounded-xl font-semibold transition-all duration-300"
+            >
+              {t('newsletter.button')}
+            </button>
+
+            <div id="newsletter-message" class="text-center text-sm text-white/70 hidden"></div>
+
+            <p class="text-center text-sm text-white/70">
+              {t('newsletter.disclaimer')}
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('newsletter-form') as HTMLFormElement;
+    const submitBtn = document.getElementById('newsletter-submit') as HTMLButtonElement;
+    const messageDiv = document.getElementById('newsletter-message') as HTMLDivElement;
+
+    if (form && submitBtn && messageDiv) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const email = formData.get('email') as string;
+
+        if (!email) {
+          showMessage(document.documentElement.lang === 'en' ? 'Please enter your email' :
+                     document.documentElement.lang === 'pt' ? 'Por favor, digite seu email' :
+                     'Por favor ingresa tu email', 'error');
+          return;
+        }
+
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = document.documentElement.lang === 'en' ? 'Subscribing...' :
+                               document.documentElement.lang === 'pt' ? 'Inscrevendo...' :
+                               'Suscribiendo...';
+
+        try {
+          const response = await fetch('/api/newsletter', {
+            method: 'POST',
+            body: formData,
+          });
+
+          const result = await response.json();
+
+          if (response.ok) {
+            const successMsg = document.documentElement.lang === 'en' ? 'Thank you! You have successfully subscribed' :
+                              document.documentElement.lang === 'pt' ? 'Obrigado! Você se inscreveu com sucesso' :
+                              '¡Gracias! Te has suscrito exitosamente';
+            showMessage(successMsg, 'success');
+            form.reset();
+          } else {
+            showMessage(result.error || 'Error al suscribirse', 'error');
+          }
+        } catch (error) {
+          console.error('Newsletter subscription error:', error);
+          const errorMsg = document.documentElement.lang === 'en' ? 'Connection error. Please try again.' :
+                          document.documentElement.lang === 'pt' ? 'Erro de conexão. Tente novamente.' :
+                          'Error de conexión. Intenta nuevamente.';
+          showMessage(errorMsg, 'error');
+        } finally {
+          // Reset button state
+          submitBtn.disabled = false;
+          const buttonText = document.documentElement.lang === 'en' ? 'Subscribe for Free' :
+                            document.documentElement.lang === 'pt' ? 'Inscrever-se Gratuitamente' :
+                            'Suscribirme Gratis';
+          submitBtn.textContent = buttonText;
+        }
+      });
+    }
+
+    function showMessage(message: string, type: 'success' | 'error') {
+      messageDiv.textContent = message;
+      messageDiv.className = `text-center text-sm transition-colors ${
+        type === 'success' ? 'text-secondary' : 'text-red-300'
+      }`;
+      messageDiv.classList.remove('hidden');
+
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        messageDiv.classList.add('hidden');
+      }, 5000);
+    }
+  });
+</script>

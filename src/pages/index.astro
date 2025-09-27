@@ -1,9 +1,324 @@
 ---
-import { defaultLang } from '../i18n/ui';
+import MainLayout from '../layouts/MainLayout.astro';
+import { useTranslations } from '../i18n/utils.js';
+import Header from '../components/layout/navigation/Header.astro';
+import NewHeroSection from '../components/sections/NewHeroSection.astro';
+import Footer from '../components/layout/Footer.astro';
+import BentoGrid from '../components/ui/BentoGrid.astro';
+import FeatureCard from '../components/ui/FeatureCard.astro';
+import GlassmorphismCard from '../components/ui/GlassmorphismCard.astro';
+import ResourcesSection from '../components/sections/ResourcesSection.astro';
+import MissionVisionSection from '../components/sections/MissionVisionSection.astro';
+import CommunitySection from '../components/sections/CommunitySection.astro';
+
+// Default to English
+const t = useTranslations('en');
 ---
 
-<meta http-equiv="refresh" content={`0;url=/${defaultLang}/`} />
+<MainLayout title={t('home.title')} description={t('home.description')}>
+  <!-- Language Suggestion Banner (hidden by default) -->
+  <div id="languageBanner" class="hidden fixed top-0 left-0 right-0 z-50 bg-primary text-white py-3 px-4 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span id="bannerText" class="text-sm font-medium">
+          <!-- Text will be set by JavaScript -->
+        </span>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="acceptLanguage" class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors">
+          <!-- Text will be set by JavaScript -->
+        </button>
+        <button id="dismissBanner" class="text-white hover:text-gray-200 text-sm font-medium px-3 py-2">
+          Stay in English
+        </button>
+        <button id="closeBanner" class="text-white hover:text-gray-200 ml-2">
+          ✕
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative overflow-hidden">
+    <!-- Background con gradientes y efectos inspirados en Celo -->
+    <div class="absolute inset-0 overflow-hidden -z-10">
+      <!-- Background base de color claro inspirado en Celo -->
+      <div class="absolute top-0 left-0 w-full h-full bg-neutral-light"></div>
+      
+      <!-- Formas geométricas estilo Celo -->
+      <div class="absolute top-[5%] right-[10%] w-64 h-64 border border-primary/10 transform rotate-45"></div>
+      <div class="absolute bottom-[20%] left-[5%] w-48 h-48 border border-primary/10 transform rotate-12"></div>
+      <div class="absolute top-[40%] right-[15%] w-32 h-32 border border-secondary/10 transform -rotate-12"></div>
+      
+      <!-- Noise texture sutil -->
+      <div class="absolute inset-0 noise-bg opacity-10"></div>
+    </div>
+    
+    <!-- New Modular Header -->
+    <Header />
+    
+    <main>
+      <!-- New Hero Section -->
+      <NewHeroSection />
+      
+      <!-- Trusted By - inspirado en Gitcoin -->
+      <section class="py-16">
+        <div class="container mx-auto">
+          <div class="text-center mb-10">
+            <div class="text-sm text-foreground/50 uppercase tracking-wider font-medium">BACKED BY LEADING ECOSYSTEMS</div>
+          </div>
+          <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            <div class="grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              <img src="https://placehold.co/120x40/EFEFEF/333333?text=Partner+1" alt="Partner 1" class="h-8" />
+            </div>
+            <div class="grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              <img src="https://placehold.co/120x40/EFEFEF/333333?text=Partner+2" alt="Partner 2" class="h-8" />
+            </div>
+            <div class="grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              <img src="https://placehold.co/120x40/EFEFEF/333333?text=Partner+3" alt="Partner 3" class="h-8" />
+            </div>
+            <div class="grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              <img src="https://placehold.co/120x40/EFEFEF/333333?text=Partner+4" alt="Partner 4" class="h-8" />
+            </div>
+            <div class="grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              <img src="https://placehold.co/120x40/EFEFEF/333333?text=Partner+5" alt="Partner 5" class="h-8" />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Features Section - inspirado en el formato de Celo -->
+      <section class="py-20">
+        <div class="container mx-auto">
+          <div class="text-center mb-16">
+            <div class="inline-flex items-center text-sm font-semibold px-4 py-2 bg-primary/10 text-primary rounded-full mb-6">
+              CORE FEATURES
+            </div>
+            <h2 class="mb-4 text-3xl md:text-4xl text-foreground">{t('home.features.title')}</h2>
+            <p class="text-lg max-w-3xl mx-auto text-foreground/80">
+              {t('home.features.subtitle')}
+            </p>
+          </div>
+          
+          <!-- Bento Grid inspirado en Celo -->
+          <BentoGrid>
+            <FeatureCard
+              title={t('home.features.decentralized.title')}
+              description={t('home.features.decentralized.description')}
+              icon="network"
+              colorClass="bg-white border-primary/10 hover:border-primary/30"
+              colSpan="col-span-12 md:col-span-6"
+              rowSpan="row-span-1"
+              highlight={true}
+              index="01"
+            />
+            
+            <FeatureCard
+              title={t('home.features.openaccess.title')}
+              description={t('home.features.openaccess.description')}
+              icon="lock-open"
+              colorClass="bg-white"
+              colSpan="col-span-12 md:col-span-6 lg:col-span-3"
+              rowSpan="row-span-1"
+              index="02"
+            />
+            
+            <FeatureCard
+              title={t('home.features.sustainable.title')}
+              description={t('home.features.sustainable.description')}
+              icon="leaf"
+              colorClass="bg-white"
+              colSpan="col-span-12 md:col-span-6 lg:col-span-3"
+              rowSpan="row-span-1"
+              index="03"
+            />
+            
+            <FeatureCard
+              title={t('home.features.reproducible.title')}
+              description={t('home.features.reproducible.description')}
+              icon="copy"
+              colorClass="bg-white"
+              colSpan="col-span-12 md:col-span-6 lg:col-span-4"
+              rowSpan="row-span-1"
+              index="04"
+            />
+            
+            <FeatureCard
+              title={t('home.features.global.title')}
+              description={t('home.features.global.description')}
+              icon="globe"
+              colorClass="bg-white"
+              colSpan="col-span-12 md:col-span-6 lg:col-span-8"
+              rowSpan="row-span-1"
+              index="05"
+            />
+          </BentoGrid>
+        </div>
+      </section>
+      
+      <!-- Vision Section - inspirado en Celo -->
+      <section class="py-20">
+        <div class="container mx-auto">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+              <div class="inline-flex items-center text-sm font-semibold px-4 py-2 bg-secondary/10 text-secondary rounded-full mb-6">
+                OUR VISION
+              </div>
+              
+              <h2 class="mb-6 text-3xl md:text-4xl">
+                <span class="text-foreground">Our </span>
+                <span class="text-primary">Vision </span>
+                <span class="text-foreground">for Open Science</span>
+              </h2>
+
+              <p class="text-lg mb-6 text-foreground/80 leading-relaxed">
+                {t('home.vision.paragraph1')}
+              </p>
+              <p class="text-lg mb-8 text-foreground/80 leading-relaxed">
+                {t('home.vision.paragraph2')}
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a href="/en/about" class="bg-primary hover:bg-primary-light text-white py-3 px-8 rounded-xl font-medium transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+                  {t('home.vision.learnMoreButton')}
+                </a>
+                <a href="/en/research" class="bg-white hover:bg-bg-subtle text-foreground py-3 px-8 rounded-xl font-medium border border-primary/20 transition-all duration-300 hover:border-primary/50">
+                  {t('home.vision.researchButton')}
+                </a>
+              </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+              <GlassmorphismCard
+                title={t('home.vision.card.title')}
+                content={t('home.vision.card.content')}
+                linkText={t('home.vision.card.linkText')}
+                linkUrl="/en/community"
+                colorClass="from-primary/20 to-secondary/20"
+                iconName="molecule"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources Section -->
+      <div id="recursos">
+        <ResourcesSection />
+      </div>
+
+      <!-- Mission and Vision Section -->
+      <div id="nosotros">
+        <MissionVisionSection />
+      </div>
+
+      <!-- Community Section - Comunidad Global -->
+      <!-- <CommunitySection /> -->
+    </main>
+    
+    <Footer />
+  </div>
+</MainLayout>
 
 <script>
-  window.location.pathname = `/${import.meta.env.DEFAULT_LANGUAGE || 'en'}/`;
+  // Language detection and suggestion
+  document.addEventListener('DOMContentLoaded', () => {
+    // Check if user has already made a language choice
+    const hasChosenLanguage = localStorage.getItem('scienceonchain-language-chosen');
+    if (hasChosenLanguage === 'true') {
+      return; // Don't show banner if user already chose
+    }
+
+    // Check if user has dismissed the banner recently (within 7 days)
+    const bannerDismissed = localStorage.getItem('scienceonchain-banner-dismissed');
+    const dismissedTime = bannerDismissed ? parseInt(bannerDismissed) : 0;
+    const sevenDaysAgo = Date.now() - (7 * 24 * 60 * 60 * 1000);
+    
+    if (dismissedTime > sevenDaysAgo) {
+      return; // Don't show banner if dismissed recently
+    }
+
+    // Detect browser language
+    const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    
+    let suggestedLang = null;
+    let bannerText = '';
+    let buttonText = '';
+
+    if (browserLang.startsWith('es')) {
+      suggestedLang = 'es';
+      bannerText = '¿Prefieres ver este sitio en español?';
+      buttonText = 'Ir a Español';
+    } else if (browserLang.startsWith('pt')) {
+      suggestedLang = 'pt';
+      bannerText = 'Prefere ver este site em português?';
+      buttonText = 'Ir para Português';
+    }
+
+    // Show banner if we detected a different language
+    if (suggestedLang && suggestedLang !== 'en') {
+      showLanguageBanner(suggestedLang, bannerText, buttonText);
+    }
+  });
+
+  function showLanguageBanner(suggestedLang, bannerText, buttonText) {
+    const banner = document.getElementById('languageBanner');
+    const bannerTextEl = document.getElementById('bannerText');
+    const acceptBtn = document.getElementById('acceptLanguage');
+    const dismissBtn = document.getElementById('dismissBanner');
+    const closeBtn = document.getElementById('closeBanner');
+
+    if (!banner || !bannerTextEl || !acceptBtn) return;
+
+    // Set text content
+    bannerTextEl.textContent = bannerText;
+    acceptBtn.textContent = buttonText;
+
+    // Show banner with animation
+    banner.classList.remove('hidden');
+    setTimeout(() => {
+      banner.style.transform = 'translateY(0)';
+    }, 10);
+
+    // Add padding to body to account for banner
+    document.body.style.paddingTop = banner.offsetHeight + 'px';
+
+    // Handle accept button
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('scienceonchain-language-chosen', 'true');
+      window.location.href = `/${suggestedLang}/`;
+    });
+
+    // Handle dismiss button
+    dismissBtn.addEventListener('click', () => {
+      localStorage.setItem('scienceonchain-language-chosen', 'true');
+      hideBanner();
+    });
+
+    // Handle close button
+    closeBtn.addEventListener('click', () => {
+      localStorage.setItem('scienceonchain-banner-dismissed', Date.now().toString());
+      hideBanner();
+    });
+
+    function hideBanner() {
+      banner.style.transform = 'translateY(-100%)';
+      setTimeout(() => {
+        banner.classList.add('hidden');
+        document.body.style.paddingTop = '0';
+      }, 300);
+    }
+  }
+
+  // Store language preference when user navigates
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href]');
+    if (link && (link.href.includes('/en/') || link.href.includes('/es/') || link.href.includes('/pt/'))) {
+      localStorage.setItem('scienceonchain-language-chosen', 'true');
+    }
+  });
 </script>
+
+<style>
+  #languageBanner {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+</style>

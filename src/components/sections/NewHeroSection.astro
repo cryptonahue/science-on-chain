@@ -1,0 +1,27 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils.js';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="bg-primary min-h-screen flex items-center justify-center px-6">
+  <div class="bg-neutral-light rounded-3xl max-w-4xl w-full p-12 text-center">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+      {t('hero.title')}
+    </h1>
+
+    <p class="text-lg md:text-xl text-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+      {t('hero.subtitle')}
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="#encuentra-tu-camino" class="bg-primary text-white hover:text-secondary py-3 px-8 rounded-lg font-medium transition-all duration-300 inline-flex items-center justify-center min-w-[180px]">
+        {t('hero.cta1')}
+      </a>
+      <a href="#recursos" class="bg-secondary hover:bg-primary-light text-foreground hover:text-neutral-light py-3 px-8 rounded-lg font-medium transition-all duration-300 inline-flex items-center justify-center min-w-[180px]">
+        {t('hero.cta2')}
+      </a>
+    </div>
+  </div>
+</section>

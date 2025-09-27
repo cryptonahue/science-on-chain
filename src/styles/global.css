@@ -7,27 +7,172 @@
 /* Merriweather se carga en el Layout principal */
 
 :root {
-  --shadow-color: 163 60% 20%;
-  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.08),
-    0.4px 0.8px 1px hsl(var(--shadow-color) / 0.11);
-  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.08),
-    0.8px 1.6px 2px hsl(var(--shadow-color) / 0.1),
-    2px 4px 5px hsl(var(--shadow-color) / 0.12);
-  --shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.08),
-    1.5px 2.9px 3.7px hsl(var(--shadow-color) / 0.09),
-    3.7px 7.3px 9.2px hsl(var(--shadow-color) / 0.11),
-    8.9px 17.6px 22.1px hsl(var(--shadow-color) / 0.13);
+  --background: hsl(139 64% 14%); /* Fondo verde #0D3B23 */
+  --foreground: hsl(204 12.1951% 8.0392%);
+  --card: hsl(50 30% 97%); /* #FAF9F5 */
+  --card-foreground: hsl(204 12.1951% 8.0392%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(204 12.1951% 8.0392%);
+  --primary: hsl(139 64% 14%); /* #0D3B23 */
+  --primary-foreground: hsl(50 30% 97%); /* #FAF9F5 */
+  --secondary: hsl(69 100% 67%); /* #E4FF55 */
+  --secondary-foreground: hsl(139 64% 14%); /* Negro para texto en botón secundario */
+  --muted: hsl(210.0000 30.7692% 94.9020%);
+  --muted-foreground: hsl(220 8.9362% 46.0784%);
+  --accent: hsl(176.6667 40.9091% 91.3725%);
+  --accent-foreground: hsl(160.9091 100% 17.2549%);
+  --destructive: hsl(0 84.2365% 60.1961%);
+  --destructive-foreground: hsl(205.7143 53.8462% 97.4510%);
+  --border: hsl(216.0000 12.1951% 83.9216%);
+  --input: hsl(216.0000 12.1951% 83.9216%);
+  --ring: hsl(160.6452 100.0000% 24.3137%);
+  --chart-1: hsl(160.6452 100.0000% 24.3137%);
+  --chart-2: hsl(240 97.2789% 71.1765%);
+  --chart-3: hsl(40.1105 88.2927% 59.8039%);
+  --chart-4: hsl(167.5714 83.3333% 32.9412%);
+  --chart-5: hsl(248.2143 100.0000% 67.0588%);
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(204 12.1951% 8.0392%);
+  --sidebar-primary: hsl(160.6452 100.0000% 24.3137%);
+  --sidebar-primary-foreground: hsl(205.7143 53.8462% 97.4510%);
+  --sidebar-accent: hsl(176.6667 40.9091% 91.3725%);
+  --sidebar-accent-foreground: hsl(160.9091 100% 17.2549%);
+  --sidebar-border: hsl(216.0000 12.1951% 83.9216%);
+  --sidebar-ring: hsl(160.6452 100.0000% 24.3137%);
+  --font-sans: 'Merriweather Sans';
+  --font-serif: Merriweather;
+  --font-mono: 'Fira Code';
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 4px 8px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0px 4px 8px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0px 4px 8px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow: 0px 4px 8px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow-md: 0px 4px 8px 0px hsl(0 0% 0% / 0.10), 0px 2px 4px -1px hsl(0 0% 0% / 0.10);
+  --shadow-lg: 0px 4px 8px 0px hsl(0 0% 0% / 0.10), 0px 4px 6px -1px hsl(0 0% 0% / 0.10);
+  --shadow-xl: 0px 4px 8px 0px hsl(0 0% 0% / 0.10), 0px 8px 10px -1px hsl(0 0% 0% / 0.10);
+  --shadow-2xl: 0px 4px 8px 0px hsl(0 0% 0% / 0.25);
+  --tracking-normal: normal;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: hsl(139 64% 14%); /* Fondo verde #0D3B23 */
+  --foreground: hsl(205.7143 53.8462% 97.4510%);
+  --card: hsl(50 30% 97%); /* #FAF9F5 */
+  --card-foreground: hsl(205.7143 53.8462% 97.4510%);
+  --popover: hsl(204 12.1951% 8.0392%);
+  --popover-foreground: hsl(205.7143 53.8462% 97.4510%);
+  --primary: hsl(139 64% 14%); /* #0D3B23 */
+  --primary-foreground: hsl(50 30% 97%); /* #FAF9F5 */
+  --secondary: hsl(69 100% 67%); /* #E4FF55 */
+  --secondary-foreground: hsl(139 64% 14%); /* Negro para texto en botón secundario */
+  --muted: hsl(215.0000 27.9070% 16.8627%);
+  --muted-foreground: hsl(217.8947 10.6145% 64.9020%);
+  --accent: hsl(215.0000 27.9070% 16.8627%);
+  --accent-foreground: hsl(205.7143 53.8462% 97.4510%);
+  --destructive: hsl(0 90.6040% 70.7843%);
+  --destructive-foreground: hsl(220 13.0435% 4.5098%);
+  --border: hsl(216.9231 19.1176% 26.6667%);
+  --input: hsl(216.9231 19.1176% 26.6667%);
+  --ring: hsl(161.6471 100% 33.3333%);
+  --chart-1: hsl(161.6471 100% 33.3333%);
+  --chart-2: hsl(240 100.0000% 79.6078%);
+  --chart-3: hsl(40.1105 88.2927% 59.8039%);
+  --chart-4: hsl(168.5714 98.8235% 33.3333%);
+  --chart-5: hsl(248.2143 100.0000% 67.0588%);
+  --sidebar: hsl(204 12.1951% 8.0392%);
+  --sidebar-foreground: hsl(205.7143 53.8462% 97.4510%);
+  --sidebar-primary: hsl(161.6471 100% 33.3333%);
+  --sidebar-primary-foreground: hsl(220 13.0435% 4.5098%);
+  --sidebar-accent: hsl(215.0000 27.9070% 16.8627%);
+  --sidebar-accent-foreground: hsl(205.7143 53.8462% 97.4510%);
+  --sidebar-border: hsl(216.9231 19.1176% 26.6667%);
+  --sidebar-ring: hsl(161.6471 100% 33.3333%);
+  --font-sans: 'Merriweather Sans';
+  --font-serif: Merriweather;
+  --font-mono: 'Fira Code';
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 4px 8px 0px hsl(0 0% 0% / 0.25);
+  --shadow-xs: 0px 4px 8px 0px hsl(0 0% 0% / 0.25);
+  --shadow-sm: 0px 4px 8px 0px hsl(0 0% 0% / 0.50), 0px 1px 2px -1px hsl(0 0% 0% / 0.50);
+  --shadow: 0px 4px 8px 0px hsl(0 0% 0% / 0.50), 0px 1px 2px -1px hsl(0 0% 0% / 0.50);
+  --shadow-md: 0px 4px 8px 0px hsl(0 0% 0% / 0.50), 0px 2px 4px -1px hsl(0 0% 0% / 0.50);
+  --shadow-lg: 0px 4px 8px 0px hsl(0 0% 0% / 0.50), 0px 4px 6px -1px hsl(0 0% 0% / 0.50);
+  --shadow-xl: 0px 4px 8px 0px hsl(0 0% 0% / 0.50), 0px 8px 10px -1px hsl(0 0% 0% / 0.50);
+  --shadow-2xl: 0px 4px 8px 0px hsl(0 0% 0% / 1.25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+
+  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
+  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
+  --tracking-normal: var(--tracking-normal);
+  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
+  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
+  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
 }
 
 @layer base {
   html {
-    font-family: 'Inter', system-ui, sans-serif;
-    @apply bg-neutral-light text-foreground;
+    font-family: 'Merriweather Sans', var(--font-sans), system-ui, sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', serif !important;
-    @apply font-bold text-foreground;
+    font-family: var(--font-serif), serif !important;
+    font-weight: bold;
+    color: var(--foreground);
   }
   
   /* Estilos para los distintos niveles de encabezados */
@@ -185,4 +330,8 @@
 
 .shape-blob {
   border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+}
+
+body {
+  letter-spacing: var(--tracking-normal);
 }

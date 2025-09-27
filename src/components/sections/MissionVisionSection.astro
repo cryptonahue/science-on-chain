@@ -1,0 +1,94 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils.js';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="py-16 md:py-24 bg-neutral-light">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8">
+          {t('missionVision.title')}
+        </h2>
+      </div>
+
+      <!-- Mission and Vision Cards Grid -->
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+
+        <!-- Misión Card -->
+        <div class="bg-white-pure rounded-2xl p-8 shadow-sm">
+          <h3 class="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            {t('mission.title')}
+          </h3>
+          <p class="text-lg md:text-xl text-foreground/80 leading-relaxed">
+            {t('mission.description')}
+          </p>
+        </div>
+
+        <!-- Visión Card -->
+        <div class="bg-white-pure rounded-2xl p-8 shadow-sm">
+          <h3 class="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            {t('vision.title')}
+          </h3>
+          <p class="text-lg md:text-xl text-foreground/80 leading-relaxed">
+            {t('vision.description')}
+          </p>
+        </div>
+
+      </div>
+
+      <!-- How We Do It and Coming Soon Cards Grid -->
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+
+        <!-- ¿Cómo lo hacemos? Card -->
+        <div class="bg-white-pure rounded-2xl p-8 shadow-sm">
+          <h3 class="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            {t('howWeDo.title')}
+          </h3>
+          <p class="text-lg text-foreground/80 leading-relaxed">
+            {t('howWeDo.description')}
+          </p>
+        </div>
+
+        <!-- Proximamente Card -->
+        <div class="bg-white-pure rounded-2xl p-8 shadow-sm">
+          <h3 class="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            {t('comingSoon.title')}
+          </h3>
+          <div class="space-y-3">
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></div>
+              <span class="text-lg text-foreground/80">{t('comingSoon.item1')}</span>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></div>
+              <span class="text-lg text-foreground/80">{t('comingSoon.item2')}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Section -->
+      <div class="text-center">
+        <h3 class="text-2xl md:text-3xl font-bold text-foreground mb-8">
+          {t('joinJourney.title')}
+        </h3>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
+          <a href="https://desciquark.com" target="_blank" rel="noopener noreferrer" class="w-full sm:flex-1 bg-primary hover:bg-primary text-white hover:text-secondary py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center">
+            {t('joinJourney.cta1')}
+          </a>
+          <a href="https://www.linkedin.com/company/scienceonchain" target="_blank" rel="noopener noreferrer" class="w-full sm:flex-1 bg-primary hover:bg-primary text-white hover:text-secondary py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center">
+            {t('joinJourney.cta2')}
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

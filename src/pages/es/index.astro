@@ -1,16 +1,18 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
-import Header from '../../components/navigation/Header.astro';
-import NewHeroSection from '../../components/NewHeroSection.astro';
-import Footer from '../../components/Footer.astro';
-import WhatIsDesciSection from '../../components/WhatIsDesciSection.astro';
-import ForWhoSection from '../../components/ForWhoSection.astro';
-import ResearchFeaturesSection from '../../components/ResearchFeaturesSection.astro';
-import EcosystemPreviewSection from '../../components/EcosystemPreviewSection.astro';
-import ResearchHighlightsSection from '../../components/ResearchHighlightsSection.astro';
-import CommunitySection from '../../components/CommunitySection.astro';
-import NewsletterCTASection from '../../components/NewsletterCTASection.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils.js';
+import Header from '../../components/layout/navigation/Header.astro';
+import NewHeroSection from '../../components/sections/NewHeroSection.astro';
+import Footer from '../../components/layout/Footer.astro';
+import WhatIsDesciSection from '../../components/sections/WhatIsDesciSection.astro';
+import ForWhoSection from '../../components/sections/ForWhoSection.astro';
+import ResearchFeaturesSection from '../../components/sections/ResearchFeaturesSection.astro';
+import EcosystemPreviewSection from '../../components/sections/EcosystemPreviewSection.astro';
+import ResearchHighlightsSection from '../../components/sections/ResearchHighlightsSection.astro';
+import ResourcesSection from '../../components/sections/ResourcesSection.astro';
+import MissionVisionSection from '../../components/sections/MissionVisionSection.astro';
+import CommunitySection from '../../components/sections/CommunitySection.astro';
+import NewsletterCTASection from '../../components/sections/NewsletterCTASection.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -34,25 +36,41 @@ const t = useTranslations(lang);
       <NewHeroSection />
       
       <!-- ¿Qué es DeSci? Section -->
-      <WhatIsDesciSection />
+      <div id="que-es-desci">
+        <WhatIsDesciSection />
+      </div>
       
       <!-- Para Quién es Esto Section -->
-      <ForWhoSection />
+      <div id="encuentra-tu-camino">
+        <ForWhoSection />
+      </div>
       
       <!-- Características DeSci -->
-      <ResearchFeaturesSection />
-      
-      <!-- Ecosystem Preview -->
-      <EcosystemPreviewSection />
-      
-      <!-- Research Highlights -->
-      <ResearchHighlightsSection />
-      
-      <!-- Community Section -->
-      <CommunitySection />
+      <!-- <ResearchFeaturesSection /> -->
+
+      <!-- Ecosystem Preview - Explora el Ecosistema DeSci -->
+      <!-- <EcosystemPreviewSection /> -->
+
+      <!-- Research Highlights - Nuestras Contribuciones de Investigación -->
+      <!-- <ResearchHighlightsSection /> -->
+
+      <!-- Resources Section -->
+      <div id="recursos">
+        <ResourcesSection />
+      </div>
+
+      <!-- Mission and Vision Section -->
+      <div id="nosotros">
+        <MissionVisionSection />
+      </div>
+
+      <!-- Community Section - Comunidad Global -->
+      <!-- <CommunitySection /> -->
       
       <!-- Newsletter CTA -->
-      <NewsletterCTASection />
+      <div id="contacto">
+        <NewsletterCTASection />
+      </div>
     </main>
     
     <Footer />

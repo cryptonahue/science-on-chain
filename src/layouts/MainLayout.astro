@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import '../styles/fonts.css';
+import { getLangFromUrl } from '../i18n/utils.js';
 
 interface Props {
   title: string;
@@ -8,10 +9,13 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
+const baseUrl = 'https://scienceonchain.org';
 ---
 
 <!DOCTYPE html>
-<html lang={Astro.currentLocale}>
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,10 +24,10 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
     
-    <!-- Google Fonts: Inter, Manrope, JetBrains Mono, Merriweather -->
+    <!-- Google Fonts: Inter, Manrope, JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Framework viewport accommodation -->
     <meta name="theme-color" content="#f7f9fc" />

@@ -1,0 +1,27 @@
+---
+import { getLangFromUrl } from '../../../i18n/utils.js';
+import DesktopNav from './DesktopNav.astro';
+import MobileNav from './MobileNav.astro';
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<header class="sticky top-0 z-50 bg-neutral-light backdrop-blur-sm border-b border-primary/20">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="/logo.svg" alt="ScienceOnChain Logo" class="h-8 w-auto" />
+        <a href={`/${lang}/`} class="text-xl font-bold font-merriweather">
+          <span class="text-primary">Science</span><span class="text-foreground">OnChain</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <DesktopNav lang={lang} />
+
+      <!-- Mobile Navigation -->
+      <MobileNav lang={lang} />
+    </div>
+  </div>
+</header>

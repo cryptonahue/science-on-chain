@@ -1,2 +1,53 @@
-/* Las fuentes se cargan desde Google Fonts en el Layout principal */
-/* Este archivo está disponible para fuentes locales personalizadas en el futuro */
+/* Merriweather Local Font Definitions */
+/* Usando archivos WOFF2 para mejor rendimiento y compresión */
+
+/* Merriweather (for titles and logo) */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Merriweather/Merriweather_120pt-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Merriweather/Merriweather_120pt-Bold.woff2') format('woff2');
+}
+
+/* Merriweather Sans (for paragraphs and body text) */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Merriweather Sans/MerriweatherSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Merriweather Sans/MerriweatherSans-Bold.woff2') format('woff2');
+}
+
+/* Fira Code (for monospace/code) */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Fira Code/FiraCode-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Fira Code/FiraCode-Bold.woff2') format('woff2');
+}

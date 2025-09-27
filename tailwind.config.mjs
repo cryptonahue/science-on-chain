@@ -4,22 +4,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Paleta actualizada con verdes más oscuros
-        'primary': '#007C54', // Verde primario más oscuro
-        'primary-light': '#00AA76', // El anterior primary se convierte en light
-        'primary-dark': '#00583C', // Verde más oscuro para mejor contraste
-        'secondary': '#6E6EFD', // Morado/púrpura (mantenido)
-        'secondary-light': '#9797FF',
-        'secondary-dark': '#5151D3',
-        'accent': '#0E9A7D', // Verde acento más oscuro
-        'accent-2': '#01A989', // Verde acento secundario más oscuro
-        'neutral-light': '#F5F9FC', // Más blanco, menos amarillento
+        // Nueva paleta de colores según especificaciones del usuario
+        'primary': '#0D3B23', // Verde fondo principal
+        'primary-light': '#37622D', // Verde para hover secundario
+        'primary-dark': '#0A2B19', // Verde más oscuro
+        'secondary': '#E4FF55', // Lima/amarillo verdoso
+        'secondary-light': '#F0FF80',
+        'secondary-dark': '#D4EF45',
+        'accent': '#0E9A7D', // Verde acento (mantenido)
+        'accent-2': '#01A989', // Verde acento secundario (mantenido)
+        'neutral-light': '#FAF9F5', // Blanco crema para contenedores
         'neutral-dark': '#0a0b0d',
-        'foreground': '#121517', // Texto más oscuro para mejor contraste
-        'bg-subtle': '#EEF2F6', // Fondo sutil con tono gris-azulado, no amarillento
-        'highlight': '#0E9A68', // Verde para destacados más oscuro
-        'accent-yellow': '#F3B73E', // Amarillo menos saturado
-        'accent-purple': '#6E57FF', // Púrpura de acento
+        'foreground': '#121517', // Texto oscuro
+        'bg-subtle': '#EEF2F6', // Fondo sutil (mantenido)
+        'highlight': '#0E9A68', // Verde para destacados (mantenido)
+        'accent-yellow': '#F3B73E', // Amarillo (mantenido)
+        'accent-purple': '#6E57FF', // Púrpura de acento (mantenido)
+        'gray-primary': '#4E4A46', // Gris principal para contenedores
+        'gray-secondary': '#77706A', // Gris secundario
+        'white-pure': '#FEFFFF', // Blanco puro para tarjetas
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

@@ -1,0 +1,145 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils.js';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="py-16 md:py-24 bg-primary">
+  <div class="container mx-auto px-6">
+    <div class="bg-neutral-light rounded-3xl p-8 md:p-12 max-w-7xl mx-auto">
+
+      <!-- Header Content -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-tight">
+          {t('forWho.title')}
+        </h2>
+        <p class="text-lg md:text-xl text-foreground/80 max-w-4xl mx-auto leading-relaxed">
+          {t('forWho.subtitle')}
+        </p>
+      </div>
+
+      <!-- Three Cards Grid -->
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Para Investigadores Card -->
+        <div class="bg-white-pure rounded-2xl p-8 shadow-sm flex flex-col">
+          <h3 class="text-xl md:text-2xl font-bold text-foreground mb-4">
+            {t('forWho.researchers.title')}
+          </h3>
+          <p class="text-foreground/80 mb-6 leading-relaxed">
+            {t('forWho.researchers.description')}
+          </p>
+
+          <!-- Features List -->
+          <div class="space-y-4 mb-8 flex-grow">
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <span class="text-foreground font-medium block">{t('forWho.researchers.feature1')}</span>
+                <span class="text-foreground/60 text-sm">{t('forWho.researchers.feature1desc')}</span>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <span class="text-foreground font-medium block">{t('forWho.researchers.feature2')}</span>
+                <span class="text-foreground/60 text-sm">{t('forWho.researchers.feature2desc')}</span>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <span class="text-foreground font-medium block">{t('forWho.researchers.feature3')}</span>
+                <span class="text-foreground/60 text-sm">{t('forWho.researchers.feature3desc')}</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://desciquark.com" target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary text-white hover:text-secondary py-3 px-6 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center">
+            {t('forWho.researchers.cta')}
+          </a>
+        </div>
+
+        <!-- Para Estudiantes Card -->
+        <div class="bg-white-pure rounded-2xl p-8 shadow-sm flex flex-col">
+          <h3 class="text-xl md:text-2xl font-bold text-foreground mb-4">
+            {t('forWho.students.title')}
+          </h3>
+          <p class="text-foreground/80 mb-6 leading-relaxed">
+            {t('forWho.students.description')}
+          </p>
+
+          <!-- Features List -->
+          <div class="space-y-4 mb-8 flex-grow">
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <span class="text-foreground font-medium block">{t('forWho.students.feature1')}</span>
+                <span class="text-foreground/60 text-sm">{t('forWho.students.feature1desc')}</span>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <span class="text-foreground font-medium block">{t('forWho.students.feature2')}</span>
+                <span class="text-foreground/60 text-sm">{t('forWho.students.feature2desc')}</span>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <span class="text-foreground font-medium block">{t('forWho.students.feature3')}</span>
+                <span class="text-foreground/60 text-sm">{t('forWho.students.feature3desc')}</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://desciquark.com" target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary text-white hover:text-secondary py-3 px-6 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center">
+            {t('forWho.students.cta')}
+          </a>
+        </div>
+
+        <!-- Para Desarrolladores Card -->
+        <div class="bg-white-pure rounded-2xl p-8 shadow-sm flex flex-col">
+          <h3 class="text-xl md:text-2xl font-bold text-foreground mb-4">
+            {t('forWho.developers.title')}
+          </h3>
+          <p class="text-foreground/80 mb-6 leading-relaxed">
+            {t('forWho.developers.description')}
+          </p>
+
+          <!-- Features List -->
+          <div class="space-y-4 mb-8 flex-grow">
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <span class="text-foreground font-medium block">{t('forWho.developers.feature1')}</span>
+                <span class="text-foreground/60 text-sm">{t('forWho.developers.feature1desc')}</span>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <span class="text-foreground font-medium block">{t('forWho.developers.feature2')}</span>
+                <span class="text-foreground/60 text-sm">{t('forWho.developers.feature2desc')}</span>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <span class="text-foreground font-medium block">{t('forWho.developers.feature3')}</span>
+                <span class="text-foreground/60 text-sm">{t('forWho.developers.feature3desc')}</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://desciquark.com" target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary text-white hover:text-secondary py-3 px-6 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center">
+            {t('forWho.developers.cta')}
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
