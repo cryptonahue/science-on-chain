@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
-import { Resend } from 'resend';
 
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
+// Do not prerender this API route and avoid any side effects at module load time
+export const prerender = false;
 
 export const POST: APIRoute = async ({ request }) => {
   try {
@@ -23,6 +23,19 @@ export const POST: APIRoute = async ({ request }) => {
         { status: 400, headers: { 'Content-Type': 'application/json' } }
       );
     }
+
+    // Read API key at runtime only (avoid build-time inlining and failures)
+    const apiKey = (process as any)?.env?.RESEND_API_KEY as string | undefined;
+    if (!apiKey) {
+      return new Response(
+        JSON.stringify({ error: 'RESEND_API_KEY not set' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Lazy import to avoid touching the library during build
+    const { Resend } = await import('resend');
+    const resend = new Resend(apiKey);
 
     // Send email using Resend
     await resend.emails.send({
