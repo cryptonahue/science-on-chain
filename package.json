@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview --host",
     "astro": "astro",
-    "clean-build": "rm -rf node_modules package-lock.json && npm install --legacy-peer-deps && astro build"
+    "clean-build": "rm -rf node_modules package-lock.json && npm install --legacy-peer-deps && astro build",
+    "cloudflare-build": "npm install @rollup/rollup-linux-x64-gnu --optional && astro build"
   },
   "dependencies": {
     "@astrojs/react": "^3.0.8",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "sass": "^1.69.5",
-    "rollup": "^4.9.4"
+    "rollup": "^4.9.4",
+    "@rollup/rollup-linux-x64-gnu": "^4.9.4"
   }
 }
